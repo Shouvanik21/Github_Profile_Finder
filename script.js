@@ -1,11 +1,13 @@
-const API_URL="https://api.github.com/users/";
+// const API_URL="https://api.github.com/users/";
 
 const main = document.getElementById("main");
 const searchBox=document.getElementById("search");
 
 const getUser = async (username) => {
     try{
-        const response = await fetch(API_URL + username);
+        const response = await fetch(`https://api.github.com/users/${username}` , {
+            headers: {Authorization: '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'}
+        });
         const data = await response.json();
         const card = `
             <div class="card">
@@ -39,12 +41,14 @@ const getUser = async (username) => {
     }
 }
 
-getUser("fabpot");
+getUser("Shouvanik21");
 
 const getRepos = async (username) => {
     try{
         const repos = document.getElementById("repo");
-        const response = await fetch(API_URL + username + "/repos");
+        const response = await fetch(`https://api.github.com/users/${username}/repos` , {
+            headers: {Authorization: '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'}
+        });
         const data = await response.json();
         console.log(data);
         data.map((item) => {
