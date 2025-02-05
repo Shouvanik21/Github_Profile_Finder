@@ -27,15 +27,36 @@ const getUser = async (username) => {
             </div>
         `
 
-        main.innerHTML=card
+        main.innerHTML=card;
         getRepos(username);
         console.log(data);      
-    }catch(error){
-        console.log(error.response.status){
-            if(error.response.status==400){
-                createErrorCard("NO profile found with this username");
-            }
+    }
+    catch(error){
+        console.log(error.response.status);
+        if(error.response.status==400){
+            createErrorCard("No profile found with this Username");
         }
     }
+}
 
+getUser("fabpot");
+
+const getRepos = async (username) => {
+    try{
+        const repos = document.getElementById("repo");
+        const response = await fetch(API_URL + username + "/repos");
+        const data = await response.json();
+        console.log(data);
+        data.map((item) => {
+            const elem = document.createElement("a");
+            elem.classList.add("repo");
+            elem.href = item.html_url;
+            elem.innerText = item.name;
+            elem.target = "_blank";
+            repos.appendChild(elem);
+        })
+    }
+    catch(error){
+        createErrorCard("No profile found with this Username");
+    }
 }
