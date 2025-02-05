@@ -60,3 +60,25 @@ const getRepos = async (username) => {
         createErrorCard("No profile found with this Username");
     }
 }
+
+const formSubmit = (e) => {
+    if(searchBox.value!=""){
+        getUser(searchBox.value);
+        searchBox.value="";
+    }
+    return false;
+}
+
+searchBox.addEventListener("focusout", () => {
+    formSubmit();
+})
+
+const createErrorCard = (msg) => {
+    const cardHTML = `
+        <div className="card">
+            <h1>${msg}</h1>
+        </div>
+    `
+
+    main.innerHTML = cardHTML;    
+}
