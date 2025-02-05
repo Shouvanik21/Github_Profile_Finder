@@ -10,7 +10,7 @@ const getUser = async (username) => {
         const card = 
         <div class="card">
             <div>
-                <img src="${data.avatar}" alt="" />
+                <img src="${data.avatar_url}" alt="image" class="avatar"></img>
             </div>
         </div>
         
