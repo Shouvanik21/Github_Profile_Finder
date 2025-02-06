@@ -53,7 +53,13 @@ body{
     margin: 0 1.5rem;
 }
 
+.img-container{
+    display: flex;
+    align-items: center;
+}
+
 .avatar{
+    
     border-radius: 50%;
     border: 10px solid white;
     height: 150px;
@@ -68,6 +74,11 @@ body{
 .user-info h2{
     margin-top: 0;
     text-align: center;
+    margin-bottom: 10px;
+}
+
+.user-info p{
+    margin-bottom: 10px;
 }
 
 .user-info ul{
@@ -76,6 +87,7 @@ body{
     justify-content: space-between;
     padding: 0;
     max-width: 400px;
+    margin-bottom: 10px;
 }
 
 .user-info ul li{
@@ -96,6 +108,7 @@ body{
     padding: 0.25rem 0.5rem;
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
+    padding-top: 10px;
     display: inline-block;
 }
 

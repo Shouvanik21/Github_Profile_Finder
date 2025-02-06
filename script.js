@@ -13,7 +13,7 @@ const getUser = async (username) => {
         const data = await response.json();
         const card = `
             <div class="card">
-                <div>
+                <div class="img-container">
                     <img src="${data.avatar_url}" alt="image" class="avatar"></img>
                 </div>
                 <div class="user-info">
