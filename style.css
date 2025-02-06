@@ -6,6 +6,10 @@
 
 body{
     background-color: #212121;
+    background-image: url("./bg-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: white;
     font-family: "Roboto",sans-serif;
     display: flex;
