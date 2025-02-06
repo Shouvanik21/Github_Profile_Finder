@@ -1,13 +1,12 @@
-// const API_URL="https://api.github.com/users/";
+const API_URL="https://api.github.com/users/";
+const extra="/repos";
 
-const main = document.getElementById("main");
-const searchBox=document.getElementById("search");
+// const main = document.getElementById("main");
+// const searchBox=document.getElementById("search");
 
-const getUser = async (username) => {
+const getUser = async () => {
     try{
-        const response = await fetch(`https://api.github.com/users/${username}` , {
-            headers: {Authorization: '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'}
-        });
+        const response = await fetch(`${API_URL}Tuhin114`);
         const data = await response.json();
         const card = `
             <div class="card">
@@ -30,25 +29,23 @@ const getUser = async (username) => {
         `
 
         main.innerHTML=card;
-        getRepos(username);
+        getRepos(Tuhin114);
         console.log(data);      
     }
     catch(error){
-        console.log(error.response.status);
-        if(error.response.status==400){
-            createErrorCard("No profile found with this Username");
-        }
+        console.log({error});
+        // if(error.response.status==400){
+        //     createErrorCard("No profile found with this Username");
+        // }
     }
-}
+};
 
-getUser("Shouvanik21");
+getUser();
 
 const getRepos = async (username) => {
     try{
         const repos = document.getElementById("repo");
-        const response = await fetch(`https://api.github.com/users/${username}/repos` , {
-            headers: {Authorization: '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'}
-        });
+        const response = await fetch(`${API_URL}Tuhin114${"/repos"}`);
         const data = await response.json();
         console.log(data);
         data.map((item) => {
@@ -65,24 +62,24 @@ const getRepos = async (username) => {
     }
 }
 
-const formSubmit = (e) => {
-    if(searchBox.value!=""){
-        getUser(searchBox.value);
-        searchBox.value="";
-    }
-    return false;
-}
+// const formSubmit = (e) => {
+//     if(searchBox.value!=""){
+//         getUser(searchBox.value);
+//         searchBox.value="";
+//     }
+//     return false;
+// }
 
-searchBox.addEventListener("focusout", () => {
-    formSubmit();
-})
+// searchBox.addEventListener("focusout", () => {
+//     formSubmit();
+// })
 
-const createErrorCard = (msg) => {
-    const cardHTML = `
-        <div className="card">
-            <h1>${msg}</h1>
-        </div>
-    `
+// const createErrorCard = (msg) => {
+//     const cardHTML = `
+//         <div className="card">
+//             <h1>${msg}</h1>
+//         </div>
+//     `
 
-    main.innerHTML = cardHTML;    
-}
+//     main.innerHTML = cardHTML;    
+// }
