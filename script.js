@@ -6,7 +6,11 @@ const extra="/repos";
 
 const getUser = async () => {
     try{
-        const response = await fetch(`${API_URL}Tuhin114`);
+        const response = await fetch(`${API_URL}Tuhin114` , {
+            headers: {
+                'Authorization': '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',
+            }
+        });
         const data = await response.json();
         const card = `
             <div class="card">
@@ -29,7 +33,7 @@ const getUser = async () => {
         `
 
         main.innerHTML=card;
-        getRepos(Tuhin114);
+        getRepos();
         console.log(data);      
     }
     catch(error){
@@ -42,10 +46,14 @@ const getUser = async () => {
 
 getUser();
 
-const getRepos = async (username) => {
+const getRepos = async () => {
     try{
         const repos = document.getElementById("repo");
-        const response = await fetch(`${API_URL}Tuhin114${"/repos"}`);
+        const response = await fetch(`${API_URL}Tuhin114${"/repos"}` , {
+            headers: {
+                'Authorization': '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',
+            }
+        });
         const data = await response.json();
         console.log(data);
         data.map((item) => {
@@ -58,7 +66,7 @@ const getRepos = async (username) => {
         })
     }
     catch(error){
-        createErrorCard("No profile found with this Username");
+        // createErrorCard("No profile found with this Username");
     }
 }
 
