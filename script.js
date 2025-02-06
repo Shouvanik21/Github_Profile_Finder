@@ -1,12 +1,11 @@
 const API_URL="https://api.github.com/users/";
-const extra="/repos";
 
-// const main = document.getElementById("main");
-// const searchBox=document.getElementById("search");
+const main = document.getElementById("main");
+const searchBox=document.getElementById("search");
 
-const getUser = async () => {
+const getUser = async (username) => {
     try{
-        const response = await fetch(`${API_URL}Tuhin114` , {
+        const response = await fetch(`${API_URL}${username}` , {
             headers: {
                 'Authorization': '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',
             }
@@ -27,29 +26,30 @@ const getUser = async () => {
                         <li>${data.public_repos}<strong>Repos</strong></li>
                     </ul>
 
-                    <div class="repo"></div>
+                    <div id="repo"></div>
                 </div>
             </div>
         `
 
         main.innerHTML=card;
-        getRepos();
+        getRepos(`${username}`);
         console.log(data);      
     }
     catch(error){
-        console.log({error});
-        // if(error.response.status==400){
-        //     createErrorCard("No profile found with this Username");
-        // }
+        console.log(error.response.status);
+        if(error.response.status==400){
+            createErrorCard("No profile found with this Username");
+        }
     }
 };
 
-getUser();
+//initial call
+getUser("Xeven777");
 
-const getRepos = async () => {
+const getRepos = async (username) => {
     try{
         const repos = document.getElementById("repo");
-        const response = await fetch(`${API_URL}Tuhin114${"/repos"}` , {
+        const response = await fetch(`${API_URL}${username}${"/repos"}` , {
             headers: {
                 'Authorization': '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',
             }
@@ -66,28 +66,28 @@ const getRepos = async () => {
         })
     }
     catch(error){
-        // createErrorCard("No profile found with this Username");
+        createErrorCard("No profile found with this Username");
     }
 }
 
-// const formSubmit = (e) => {
-//     if(searchBox.value!=""){
-//         getUser(searchBox.value);
-//         searchBox.value="";
-//     }
-//     return false;
-// }
+const formSubmit = (e) => {
+    if(searchBox.value!=""){
+        getUser(searchBox.value);
+        searchBox.value="";
+    }
+    return false;
+}
 
-// searchBox.addEventListener("focusout", () => {
-//     formSubmit();
-// })
+searchBox.addEventListener("focusout", () => {
+    formSubmit();
+})
 
-// const createErrorCard = (msg) => {
-//     const cardHTML = `
-//         <div className="card">
-//             <h1>${msg}</h1>
-//         </div>
-//     `
+const createErrorCard = (msg) => {
+    const cardHTML = `
+        <div className="card">
+            <h1>${msg}</h1>
+        </div>
+    `
 
-//     main.innerHTML = cardHTML;    
-// }
+    main.innerHTML = cardHTML;    
+}
