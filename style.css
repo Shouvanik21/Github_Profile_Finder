@@ -7,7 +7,7 @@
 body{
     /* background: linear-gradient(to right, #001627, #001053, #00122e) center; */
     background-color: #212121;
-    background-image: url("./images/bg-img2.jpg");
+    background-image: url("./bg-img.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -51,7 +51,7 @@ body{
 
 .card{
     max-width: 800px;
-    background-color: #fffafa;
+    background-color: #fffefc;
     border-radius: 20px;
     box-shadow: 0px 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(0, 0, 0, 0.1);
