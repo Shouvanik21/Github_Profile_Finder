@@ -5,9 +5,9 @@
 }
 
 body{
-    background: linear-gradient(to right, #001627, #001053, #00122e) center;
+    /* background: linear-gradient(to right, #001627, #001053, #00122e) center; */
     background-color: #212121;
-    /* background-image: url("./bg-img.jpg"); */
+    background-image: url("./bg-img.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

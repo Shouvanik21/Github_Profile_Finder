@@ -6,17 +6,28 @@
     <title>Github Profile Finder</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Odibee+Sans&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap" rel="stylesheet">
+    <style>
+        .glow {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #fffefc 10%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(95px);
+            transition: transform 0.05s linear;
+            mix-blend-mode: screen; /* Ensures glow stands out on grayscale */
+        }
+    </style>
 </head>
 <body>
-    <div class="light"></div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <div class="glow"></div>
     <script>
-        $(document).on('mousemove', function (e) {
-                $('.light').css({
-                        opacity: 1,
-                        left: e.pageX - 600,
-                        top: e.pageY - 600,
-                });
+        const glow = document.querySelector('.glow');
+
+        document.addEventListener('mousemove', (e) => {
+            glow.style.left = `${e.clientX - 100}px`;
+            glow.style.top = `${e.clientY - 100}px`;
         });
     </script>
     
