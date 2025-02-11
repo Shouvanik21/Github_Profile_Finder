@@ -56,7 +56,8 @@ const getRepos = async (username) => {
         });
         const data = await response.json();
         console.log(data);
-        data.map((item) => {
+        const first30data=data.slice(0,30);
+        first30data.map((item) => {
             const elem = document.createElement("a");
             elem.classList.add("repo");
             elem.href = item.html_url;
