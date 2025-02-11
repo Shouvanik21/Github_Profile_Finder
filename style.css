@@ -5,8 +5,9 @@
 }
 
 body{
+    background: linear-gradient(to right, #001627, #001053, #00122e) center;
     background-color: #212121;
-    background-image: url("./bg-img.jpg");
+    /* background-image: url("./bg-img.jpg"); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -19,11 +20,13 @@ body{
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    cursor: crosshair;
 }
 
 .user-form{
     max-width: 700px;
     width: 100%;
+    cursor: pointer;
 }
 .user-form input{
     width: 100%;
@@ -55,6 +58,7 @@ body{
     display: flex;
     padding: 3rem;
     margin: 0 1.5rem;
+    cursor:default;
 }
 
 .img-container{
