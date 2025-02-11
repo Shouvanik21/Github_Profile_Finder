@@ -85,7 +85,7 @@ body{
 }
 
 .user-info p{
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .user-info ul{
@@ -94,7 +94,7 @@ body{
     justify-content: space-between;
     padding: 0;
     max-width: 400px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .user-info ul li{
