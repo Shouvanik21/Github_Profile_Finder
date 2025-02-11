@@ -66,10 +66,9 @@ body{
     align-items: center;
 }
 
-.avatar{
-    
+.avatar{    
     border-radius: 50%;
-    border: 5px solid black;
+    border: 5px solid #80b9c8;
     height: 150px;
     width: 150px;
 }
