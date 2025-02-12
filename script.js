@@ -65,8 +65,9 @@ const getRepos = async (username) => {
             elem.target = "_blank";
             elem.style.backgroundColor="#80b9c8";
             elem.style.color="black";
-            elem.style.fontSize="12px"
-            elem.style.fontWeight="500"
+            elem.style.fontSize="12px";
+            elem.style.fontWeight="500";
+            elem.style.borderRadius="15px";
             repos.appendChild(elem);
         })
     }

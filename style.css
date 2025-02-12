@@ -24,16 +24,51 @@ body{
 }
 
 .user-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    max-width: 700px;
+    width: 100%;
+}
+
+#search{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #80b9c8;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/* .user-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     max-width: 700px;
     width: 100%;
     cursor: pointer;
 }
 .user-form input{
-    width: 100%;
-    display: block;
     background-color: whitesmoke;
-    border: none;
+    width: 100%;
     border-radius: 30px;
+    display: block;
+    border: none;
     color: black;
     padding: 1rem;
     margin-bottom: 2rem;
@@ -47,7 +82,7 @@ body{
 }
 .user-form input:focus{
     outline: none;
-}
+} */
 
 .card{
     max-width: 800px;
