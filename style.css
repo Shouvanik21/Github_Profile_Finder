@@ -35,13 +35,14 @@ body{
     width: 100%;
 }
 
-#search{
+.user-form input{
     flex: 1;
     border: none;
     outline: none;
     background: transparent;
     padding: 10px;
-    font-weight: 14px;
+    font-weight: 20px;
+    font-size: 15px;
 }
 
 button{
