@@ -26,6 +26,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 75px;
+}
+
+header h2{
+    color: #fbfaf2;
 }
 
 #image1,#image2{
@@ -37,11 +42,16 @@ header{
     margin-right: 10px;
 }
 
+#image2{
+    margin-left: 10px;
+}
+
 .main1{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 0;
     height: 85%;
 }
 
