@@ -21,6 +21,20 @@ body{
     overflow: hidden;
     cursor: crosshair;
 }
+header{
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85%;
+}
 
 .user-form{
     display: flex;

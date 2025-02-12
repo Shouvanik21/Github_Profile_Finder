@@ -10,11 +10,20 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body> 
-    <form class="user-form" id="form" onsubmit="return formSubmit()">
-        <input type="text" id="search" placeholder="Search a Github User">
-        <button><i class='bx bx-search bx-tada' ></i></button>
-    </form>
-    <main id="main"></main>
+    <header class="logo">
+        <!-- <img id="image" src="./logo.png" alt="https://i.postimg.cc/mkBMRDnB/Github.jpg"> -->
+         <img src="./github-mark-white.png" alt="!" id="image1">
+         <h2>Github Profile Finder</h2>
+         <img src="./github-mark-white.png" alt="!" id="image1">
+    </header>
+    <div class="main1">
+        <form class="user-form" id="form" onsubmit="return formSubmit()">
+            <input type="text" id="search" placeholder="Search a Github User">
+            <button><i class='bx bx-search bx-tada' ></i></button>
+        </form>
+        <main id="main"></main>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
