@@ -5,7 +5,6 @@
 }
 
 body{
-    /* background: linear-gradient(to right, #001627, #001053, #00122e) center; */
     background-color: #212121;
     background-image: url("./bg-img.jpg");
     background-repeat: no-repeat;
@@ -45,6 +44,13 @@ body{
     font-size: 15px;
 }
 
+.user-form input::placeholder{
+    color: black;
+}
+.user-form input:focus{
+    outline: none;
+}
+
 button{
     border: none;
     outline: none;
@@ -55,35 +61,6 @@ button{
     cursor: pointer;
     border-radius: 40px;
 }
-
-/* .user-form{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 700px;
-    width: 100%;
-    cursor: pointer;
-}
-.user-form input{
-    background-color: whitesmoke;
-    width: 100%;
-    border-radius: 30px;
-    display: block;
-    border: none;
-    color: black;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    font-family: "Roboto",sans-serif;
-    font-size: 1rem;
-    box-shadow: 0px 0px 10px rgb(154, 160, 185, 0.05),
-    0 15px 40px rgba(0,0,0,0.1);
-}
-.user-form input::placeholder{
-    color: black;
-}
-.user-form input:focus{
-    outline: none;
-} */
 
 .card{
     max-width: 800px;
