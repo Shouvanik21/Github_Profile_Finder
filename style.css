@@ -28,6 +28,15 @@ header{
     justify-content: space-between;
 }
 
+#image1,#image2{
+    height: 100px;
+    width: 100px;
+}
+
+#image1{
+    margin-right: 10px;
+}
+
 .main1{
     display: flex;
     align-items: center;
