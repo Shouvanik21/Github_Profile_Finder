@@ -65,6 +65,8 @@ header h2{
     margin-bottom: 25px;
     max-width: 700px;
     width: 100%;
+    position: fixed;
+    top: 25%;
 }
 
 .user-form input{
@@ -104,6 +106,7 @@ button{
     display: flex;
     padding: 3rem;
     margin: 0 1.5rem;
+    margin-top: 90px; 
     cursor:default;
 }
 
