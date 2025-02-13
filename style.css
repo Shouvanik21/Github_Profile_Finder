@@ -97,6 +97,7 @@ header h2{
 
 .user-form input::placeholder{
     color: black;
+    font-family: "Poppins",sans-serif;
 }
 .user-form input:focus{
     outline: none;
