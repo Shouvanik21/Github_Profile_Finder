@@ -1,7 +1,7 @@
-<!-- <div align="center">
-<img src="./images/GitHub___headpic.jpg" height="300px"
+<div align="center">
+<img src="./images/bg-img2.jpg" height="300px"
 >
-</div> -->
+</div>
 
 <br>
 
