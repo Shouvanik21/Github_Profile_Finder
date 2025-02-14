@@ -57,7 +57,7 @@ header h2{
 .box{
     border: 2px solid #80b9c8;
     padding: 10px 30px 10px 30px;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0px 0px 17px #80b9c8;
     display: flex;
     justify-content: space-between;
@@ -199,14 +199,83 @@ button{
 }
 
 @media screen and (max-width:500px) {
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: green;
+        background-image: none;
+    }
+
+    header{
+        height: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 35px;
+        /* top: 50px; */
+        margin-top: 20px;
+    }
+
+    #image1,#image2{
+        height: 75px;
+        width: 75px;
+    }
+
+    header h2{
+        font-size: medium;
+    }
+
+    .main1{
+        height: 90%;
+    }
+
+    .user-form{
+        margin-top: 0;
+        max-width: 400px;
+        margin-left: 20px;
+        margin-bottom: 0;
+        position: relative;
+        top: 0;
+    }
+
     .card{
+        margin-top: 40px;
         flex-direction: column;
         align-items: center;
+        max-width: 350px;
+        padding-bottom: 3rem;
+        padding-top: 1%;
+        height: 550px;
     }
-    body{
-        margin: 23rem 0;
-    }
+
     .user-info{
-        max-width: 400px;
+        font-size: medium;
+
     }
+
+    .avatar{
+        border-radius: 50%;
+        margin: 1rem;
+        /* box-shadow: 0 0 18px #00ffb3; */
+        height: clamp(100px, 20vw, 160px);
+        width: clamp(100px, 20vw, 160px);
+        /* transition: all 0.3s ease-in-out; */
+    }
+
+    .user-info {
+        margin: 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      html {
+        font-size: 90%;
+      }
+
+    footer{
+        height: 5%;
+    }  
 }

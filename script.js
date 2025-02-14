@@ -44,7 +44,7 @@ const getUser = async (username) => {
 };
 
 //initial call
-// getUser("Tuhin114");
+getUser("Tuhin114");
 
 const getRepos = async (username) => {
     try{
@@ -56,20 +56,43 @@ const getRepos = async (username) => {
         });
         const data = await response.json();
         console.log(data);
-        const first25data=data.slice(0,25);
-        first25data.map((item) => {
-            const elem = document.createElement("a");
-            elem.classList.add("repo");
-            elem.href = item.html_url;
-            elem.innerText = item.name;
-            elem.target = "_blank";
-            elem.style.backgroundColor="#80b9c8";
-            elem.style.color="black";
-            elem.style.fontSize="12px";
-            elem.style.fontWeight="500";
-            elem.style.borderRadius="15px";
-            repos.appendChild(elem);
-        })
+        
+        const bodyWidth = window.innerHeight;
+        console.log(bodyWidth);
+
+        if (bodyWidth < 500) {
+            const first10data = data.slice(0, 10);
+            console.log(first10data);
+            first10data.map((item) => {
+                const elem = document.createElement("a");
+                elem.classList.add("repo");
+                elem.href = item.html_url;
+                elem.innerText = item.name;
+                elem.target = "_blank";
+                elem.style.backgroundColor="#80b9c8";
+                elem.style.color="black";
+                elem.style.fontSize="12px";
+                elem.style.fontWeight="500";
+                elem.style.borderRadius="15px";
+                repos.appendChild(elem);
+            })
+        }
+        else{
+            const first25data=data.slice(0,25);
+            first25data.map((item) => {
+                const elem = document.createElement("a");
+                elem.classList.add("repo");
+                elem.href = item.html_url;
+                elem.innerText = item.name;
+                elem.target = "_blank";
+                elem.style.backgroundColor="#80b9c8";
+                elem.style.color="black";
+                elem.style.fontSize="12px";
+                elem.style.fontWeight="500";
+                elem.style.borderRadius="15px";
+                repos.appendChild(elem);
+            })
+        }
     }
     catch(error){
         createErrorCard("No profile found with this Username");
