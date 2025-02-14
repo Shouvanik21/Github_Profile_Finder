@@ -44,7 +44,7 @@ const getUser = async (username) => {
 };
 
 //initial call
-getUser("Tuhin114");
+// getUser("Tuhin114");
 
 const getRepos = async (username) => {
     try{
@@ -57,7 +57,7 @@ const getRepos = async (username) => {
         const data = await response.json();
         console.log(data);
         
-        const bodyWidth = window.innerHeight;
+        const bodyWidth = window.innerWidth;
         console.log(bodyWidth);
 
         if (bodyWidth < 500) {

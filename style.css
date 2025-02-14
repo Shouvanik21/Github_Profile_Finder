@@ -204,8 +204,6 @@ button{
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background-color: green;
-        background-image: none;
     }
 
     header{
@@ -214,8 +212,8 @@ button{
         align-items: center;
         justify-content: center;
         margin-left: 35px;
-        /* top: 50px; */
         margin-top: 20px;
+        margin-right: 20px;
     }
 
     #image1,#image2{
@@ -235,6 +233,7 @@ button{
         margin-top: 0;
         max-width: 400px;
         margin-left: 20px;
+        margin-right: 20px;
         margin-bottom: 0;
         position: relative;
         top: 0;
@@ -258,10 +257,8 @@ button{
     .avatar{
         border-radius: 50%;
         margin: 1rem;
-        /* box-shadow: 0 0 18px #00ffb3; */
         height: clamp(100px, 20vw, 160px);
         width: clamp(100px, 20vw, 160px);
-        /* transition: all 0.3s ease-in-out; */
     }
 
     .user-info {
@@ -269,13 +266,40 @@ button{
         text-align: center;
         justify-content: center;
         align-items: center;
-      }
+    }
     
-      html {
-        font-size: 90%;
-      }
+    html {
+       font-size: 90%;
+    }
 
     footer{
         height: 5%;
     }  
+}
+
+@media screen and (min-height:780px) and (max-height:1100px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .user-form{
+        margin-top: 0;
+        top: 210px;
+        width: 750px;
+    }
+
+    header{
+        padding-top: 96px;
+    }
+
+    .main1{
+        width: 1000px;
+    }
+
+    .card{
+        margin-bottom: 100px;
+    }
 }
