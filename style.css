@@ -21,6 +21,8 @@ body{
     overflow: hidden;
     cursor: crosshair;
 }
+
+/* this is the header part */
 header{
     height: 10%;
     display: flex;
