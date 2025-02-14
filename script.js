@@ -43,9 +43,6 @@ const getUser = async (username) => {
     }
 };
 
-//initial call
-// getUser("Tuhin114");
-
 const getRepos = async (username) => {
     try{
         const repos = document.getElementById("repo");
